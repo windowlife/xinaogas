@@ -1,0 +1,121 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "新奥燃气",
+        "description": "填写 e城e家 App token。输入城市关键词，支持中文名、拼音、cityId。",
+        "data": {
+          "token": "Token",
+          "city_search": "城市搜索"
+        }
+      },
+      "select_city": {
+        "title": "选择城市",
+        "description": "找到 {count} 个匹配城市，请从列表中选择。",
+        "data": {
+          "city_choice": "城市"
+        }
+      },
+      "select_account": {
+        "title": "选择燃气户号",
+        "description": "当前账号下找到 {count} 个燃气户号，请选择要接入 Home Assistant 的户号。",
+        "data": {
+          "account_choice": "燃气户号"
+        }
+      }
+    },
+    "error": {
+      "auth": "认证失败，token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查 token 和城市。",
+      "unknown": "未知错误。",
+      "invalid_city": "未找到这个城市。",
+      "invalid_account": "请选择列表中的燃气户号。"
+    },
+    "abort": {
+      "already_configured": "该燃气账户已经配置。",
+      "auth": "认证失败，token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查 token 和城市。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "新奥燃气设置",
+        "description": "可更新 App token、城市、燃气户号和刷新间隔。",
+        "data": {
+          "token": "Token",
+          "city_search": "城市搜索",
+          "update_interval": "刷新间隔（分钟）"
+        }
+      },
+      "select_city": {
+        "title": "选择城市",
+        "description": "找到 {count} 个匹配城市，请从列表中选择。",
+        "data": {
+          "city_choice": "城市"
+        }
+      },
+      "select_account": {
+        "title": "选择燃气户号",
+        "description": "当前账号下找到 {count} 个燃气户号，请选择要接入 Home Assistant 的户号。",
+        "data": {
+          "account_choice": "燃气户号"
+        }
+      }
+    },
+    "error": {
+      "auth": "认证失败，token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查 token 和城市。",
+      "unknown": "未知错误。",
+      "invalid_city": "未找到这个城市。",
+      "invalid_account": "请选择列表中的燃气户号。"
+    },
+    "abort": {
+      "auth": "认证失败，token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查 token 和城市。"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "燃气余额"
+      },
+      "meter_reading": {
+        "name": "燃气总抄表数"
+      },
+      "last_meter_reading": {
+        "name": "上次抄表数"
+      },
+      "gas_price": {
+        "name": "燃气单价"
+      },
+      "ladder": {
+        "name": "燃气阶梯"
+      },
+      "query_date": {
+        "name": "最近账单日期"
+      },
+      "meter_reading_date": {
+        "name": "抄表日期"
+      },
+      "bill_status": {
+        "name": "账单状态"
+      },
+      "meter_type": {
+        "name": "燃气表类型"
+      },
+      "company_name": {
+        "name": "燃气公司"
+      },
+      "last_update_time": {
+        "name": "数据更新时间"
+      },
+      "latest_bill_gas": {
+        "name": "最近账单用气量"
+      },
+      "latest_bill_amount": {
+        "name": "最近账单金额"
+      }
+    }
+  }
+}

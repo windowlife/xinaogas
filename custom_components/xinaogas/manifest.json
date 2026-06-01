@@ -1,0 +1,12 @@
+{
+  "domain": "xinaogas",
+  "name": "新奥燃气",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/custom-components/xinaogas",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "0.6.4"
+}
