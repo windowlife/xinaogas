@@ -1,10 +1,11 @@
 {
   "domain": "xinaogas",
   "name": "新奥燃气",
-  "codeowners": [],
+  "codeowners": ["@windowlife"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/custom-components/xinaogas",
+  "documentation": "https://github.com/windowlife/xinaogas",
+  "issue_tracker": "https://github.com/windowlife/xinaogas/issues",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": [],
