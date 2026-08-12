@@ -3,17 +3,10 @@
     "step": {
       "user": {
         "title": "新奥燃气",
-        "description": "填写 e城e家 App token。输入城市关键词，支持中文名、拼音、cityId。",
+        "description": "首次使用或全局 token 失效时，填写新奥燃气微信小程序 token。已有全局 token 时会直接进入户号选择。",
         "data": {
-          "token": "Token",
-          "city_search": "城市搜索"
-        }
-      },
-      "select_city": {
-        "title": "选择城市",
-        "description": "找到 {count} 个匹配城市，请从列表中选择。",
-        "data": {
-          "city_choice": "城市"
+          "token": "小程序 Token",
+          "update_interval": "数据刷新间隔（分钟，建议360以上）"
         }
       },
       "select_account": {
@@ -25,34 +18,25 @@
       }
     },
     "error": {
-      "auth": "认证失败，token 可能已失效。",
-      "cannot_connect": "接口请求失败，请检查 token 和城市。",
+      "auth": "认证失败，小程序 token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查小程序 token。",
       "unknown": "未知错误。",
-      "invalid_city": "未找到这个城市。",
       "invalid_account": "请选择列表中的燃气户号。"
     },
     "abort": {
       "already_configured": "该燃气账户已经配置。",
-      "auth": "认证失败，token 可能已失效。",
-      "cannot_connect": "接口请求失败，请检查 token 和城市。"
+      "auth": "认证失败，小程序 token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查小程序 token。"
     }
   },
   "options": {
     "step": {
       "init": {
         "title": "新奥燃气设置",
-        "description": "可更新 App token、城市、燃气户号和刷新间隔。",
+        "description": "更新全局小程序 token、数据刷新间隔或切换当前户号。token 不填时使用已有全局 token。",
         "data": {
-          "token": "Token",
-          "city_search": "城市搜索",
-          "update_interval": "刷新间隔（分钟）"
-        }
-      },
-      "select_city": {
-        "title": "选择城市",
-        "description": "找到 {count} 个匹配城市，请从列表中选择。",
-        "data": {
-          "city_choice": "城市"
+          "token": "小程序 Token",
+          "update_interval": "数据刷新间隔（分钟，建议360以上）"
         }
       },
       "select_account": {
@@ -64,19 +48,36 @@
       }
     },
     "error": {
-      "auth": "认证失败，token 可能已失效。",
-      "cannot_connect": "接口请求失败，请检查 token 和城市。",
+      "auth": "认证失败，小程序 token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查小程序 token。",
       "unknown": "未知错误。",
-      "invalid_city": "未找到这个城市。",
       "invalid_account": "请选择列表中的燃气户号。"
     },
     "abort": {
-      "auth": "认证失败，token 可能已失效。",
-      "cannot_connect": "接口请求失败，请检查 token 和城市。"
+      "auth": "认证失败，小程序 token 可能已失效。",
+      "cannot_connect": "接口请求失败，请检查小程序 token。"
     }
   },
   "entity": {
     "sensor": {
+      "current_month_amount": {
+        "name": "最近账单金额"
+      },
+      "current_month_usage": {
+        "name": "最近账单用气量"
+      },
+      "meter_reading_date": {
+        "name": "抄表日期"
+      },
+      "latest_bill_date": {
+        "name": "最近账单日期"
+      },
+      "gas_price": {
+        "name": "燃气单价"
+      },
+      "ladder": {
+        "name": "燃气阶梯"
+      },
       "balance": {
         "name": "燃气余额"
       },
@@ -86,32 +87,35 @@
       "last_meter_reading": {
         "name": "上次抄表数"
       },
-      "gas_price": {
-        "name": "燃气单价"
-      },
-      "ladder": {
-        "name": "燃气阶梯"
-      },
-      "query_date": {
-        "name": "最近账单日期"
-      },
-      "meter_reading_date": {
-        "name": "抄表日期"
+      "last_update_time": {
+        "name": "数据更新时间"
       },
       "bill_status": {
         "name": "账单状态"
       },
+      "month_total_gas": {
+        "name": "当月累计气量"
+      },
+      "daily_usage": {
+        "name": "日用气量"
+      },
+      "valve_status": {
+        "name": "燃气表阀门"
+      },
+      "battery_status": {
+        "name": "燃气表电池状态"
+      },
+      "iot_update_time": {
+        "name": "物联表更新时间"
+      },
       "meter_type": {
         "name": "燃气表类型"
       },
-      "last_update_time": {
-        "name": "数据更新时间"
+      "company_name": {
+        "name": "燃气公司"
       },
-      "latest_bill_gas": {
-        "name": "最近账单用气量"
-      },
-      "latest_bill_amount": {
-        "name": "最近账单金额"
+      "cumulative_usage": {
+        "name": "累计用气"
       }
     }
   }
