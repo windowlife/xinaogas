@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "新奥燃气",
-        "description": "请填写新奥燃气微信小程序 token。第二个户号会直接进入户号选择。",
+        "description": "首次使用或全局 token 失效时，填写新奥燃气微信小程序 token。已有全局 token 时会直接进入户号选择。",
         "data": {
           "token": "小程序 Token",
           "update_interval": "数据刷新间隔（分钟，建议360以上）"
